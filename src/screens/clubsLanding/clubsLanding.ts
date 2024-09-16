@@ -12,13 +12,15 @@ class ClubsLanding extends HTMLElement {
 
     render() {
         if (this.shadowRoot) {
-            this.shadowRoot.innerHTML = `<nav-bar 
-                icon="BookLoop"
-                img="./src/assets/medium_logo.png"
-                input="Search"
-            ></nav-bar>`;
+            this.shadowRoot.innerHTML = `
+                <nav-bar 
+                    icon="./dist/assets/big_logo.png"
+                    img="./dist/assets/medium_logo.png"
+                    input="Search"
+                ></nav-bar>
+            `;
         }
-    }
+    }    
 }
 
 customElements.define('clubs-landing', ClubsLanding);

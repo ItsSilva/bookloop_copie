@@ -1,5 +1,6 @@
 import * as components from './components/index';
 import ClubsLanding from './screens/clubsLanding/clubsLanding';
+import NavBar, { Attribute } from '../src/components/navBar/navBar';
 
 class AppContainer extends HTMLElement {
     constructor() {
@@ -14,7 +15,7 @@ class AppContainer extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-                <clubs-landing></clubs-landing>
+            <clubs-landing></clubs-landing>
             `;
         }
     }
