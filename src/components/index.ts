@@ -1,0 +1,1 @@
+export { default as clubsLanding } from '../screens/clubsLanding/clubsLanding';
