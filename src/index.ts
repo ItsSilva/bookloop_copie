@@ -1,6 +1,5 @@
 import * as components from './components/index';
-import ClubsLanding from './screens/clubsLanding/clubsLanding';
-import NavBar, { Attribute } from '../src/components/navBar/navBar';
+import './screens/clubsLanding/clubsLanding';
 
 class AppContainer extends HTMLElement {
     constructor() {

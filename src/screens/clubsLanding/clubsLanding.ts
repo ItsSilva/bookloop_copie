@@ -1,4 +1,4 @@
-import NavBar, { Attribute } from '../../components/navBar/navBar';
+import '../../components/navBar/navBar';
 
 class ClubsLanding extends HTMLElement {
     constructor() {
@@ -14,8 +14,8 @@ class ClubsLanding extends HTMLElement {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
                 <nav-bar 
-                    icon="./dist/assets/big_logo.png"
-                    img="./dist/assets/medium_logo.png"
+                    icon="../src/assets/logos/big_logo.png"
+                    img="../src/assets/logos/medium_logo.png"
                     input="Search"
                 ></nav-bar>
             `;

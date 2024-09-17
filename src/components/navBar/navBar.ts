@@ -15,12 +15,12 @@ class NavBar extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return Object.keys(Attribute) as Array<Attribute>; // Asegúrate de que TypeScript reconozca el tipo
+        return Object.keys(Attribute) as Array<Attribute>;
     }
 
     attributeChangedCallback(propName: Attribute, oldValue: string | undefined, newValue: string | undefined) {
         this[propName] = newValue; // icon, img, input
-        this.render(); // Llama a render cada vez que un atributo cambia
+        this.render();
     }
 
     connectedCallback() {
@@ -30,18 +30,18 @@ class NavBar extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./src/components/navBar/navBar.css">
+                <link rel="stylesheet" href="../src/components/navBar/navBar.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-                <section>
-                <div>
-                    <img src="${this.icon || 'No Icon'}" alt="BookLoop Logo">
+                <section class='container'>
+                <div class='container-img-icon'>
+                    <img src="${this.icon || 'No Icon'}" alt="BookLoop icon">
                 </div>
 
-                <div>
+                <div class='container-img-logo'>
                     <img src="${this.img || 'No Image'}" alt="BookLoop Logo">
                 </div>
 
-                <div>
+                <div class='container-search'>
                     <i class="fa-solid fa-magnifying-glass" style="color: #f1e8e3;"></i>
                     <input type="text" placeholder="${this.input || 'Search'}">
                 </div>
