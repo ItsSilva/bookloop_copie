@@ -1,6 +1,8 @@
 // import '../../components/navBar/navBar';
 import * as components from '../../components/index';
-import UserInfo from '../../components/userInfo/userInfo';
+import '../../components/userInfo/userInfo';
+import '../../components/navBar/navBar';
+import UserInfo, { Attribute } from '../../components/userInfo/userInfo';
 import {dataUsers } from '../../data/dataUsers';
 
 class ClubsLanding extends HTMLElement {
@@ -35,17 +37,13 @@ class ClubsLanding extends HTMLElement {
                     input="Search"
                 ></nav-bar>
             `;
-
             this.user.forEach((e) => {
                 this.shadowRoot?.appendChild(e);
-            console.log('Clubs Landing connected');
+            // console.log('Clubs Landing connected');
             })
-
-            // console.log(this.user);
-            
+            this.shadowRoot.innerHTML += ``
         }
     }    
 }
-
 customElements.define('clubs-landing', ClubsLanding);
 export default ClubsLanding;
