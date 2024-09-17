@@ -15,7 +15,7 @@ class ClubsLanding extends HTMLElement {
             
             const userCard = this.ownerDocument.createElement('user-info') as UserInfo;
             userCard.setAttribute('background', dataUser.background);
-            userCard.setAttribute('userPic', dataUser.userPic);
+            userCard.setAttribute('userpic', dataUser.userpic);
             userCard.setAttribute('name', dataUser.name);
             userCard.setAttribute('at', dataUser.at);
             this.user.push(userCard);

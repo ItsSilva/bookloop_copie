@@ -1,13 +1,13 @@
 export enum Attribute {
     'background' = 'background',
-    'userPic' = 'userPic',
+    'userpic' = 'userpic',
     'name' = 'name',
     'at' = 'at',
 };
 
 class UserInfo extends HTMLElement {
     background?: string;
-    userPic?: string;
+    userpic?: string;
     name?: string;
     at?: string;
 
@@ -21,7 +21,7 @@ class UserInfo extends HTMLElement {
     }
 
     attributeChangedCallback(propName: Attribute, oldValue: string | undefined, newValue: string | undefined) {
-        this[propName] = newValue; // background, userPic, name, at
+        this[propName] = newValue; // background, userpic, name, at
         this.render();
     }
 
@@ -39,7 +39,7 @@ class UserInfo extends HTMLElement {
                 <div class='container-background'>
                     <img src="${this.background || 'No Image'}" alt="Background">
                         <div>
-                            <img src="${this.userPic || 'No Image'}" alt="User Picture">
+                            <img src="${this.userpic || 'No Image'}" alt="User Picture">
                         </div>
                         <div>
                             <h2>${this.name || 'No Name'}</h2>
