@@ -34,7 +34,8 @@ class NavBar extends HTMLElement {
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                 <section class='container'>
                 <div class='container-img-icon'>
-                    <img src="${this.icon || 'No Icon'}" alt="BookLoop icon">
+                    <!-- <img src="${this.icon || 'No Icon'}" alt="BookLoop icon"> -->
+                    <i class="fa-solid fa-bars" style="color: #f9f5f3;"></i>
                 </div>
 
                 <div class='container-img-logo'>
@@ -42,7 +43,7 @@ class NavBar extends HTMLElement {
                 </div>
 
                 <div class='container-search'>
-                    <i class="fa-solid fa-magnifying-glass" style="color: #f1e8e3;"></i>
+                    <i class="fa-solid fa-magnifying-glass" style="color: #322316;"></i>
                     <input type="text" placeholder="${this.input || 'Search'}">
                 </div>
                 </section>
