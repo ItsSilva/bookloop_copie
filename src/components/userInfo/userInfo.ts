@@ -38,10 +38,10 @@ class UserInfo extends HTMLElement {
             <section class='container'>
                 <div class='container-background'>
                     <img src="${this.background || 'No Image'}" alt="Background">
-                        <div>
+                        <div class='container-userpic'>
                             <img src="${this.userpic || 'No Image'}" alt="User Picture">
                         </div>
-                        <div>
+                        <div class='container-text'>
                             <h2>${this.name || 'No Name'}</h2>
                             <p>${this.at || 'No At'}</p>
                         </div>
