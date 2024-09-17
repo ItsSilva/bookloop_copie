@@ -5,7 +5,7 @@ export enum Attribute {
     'at' = 'at',
 };
 
-class userInfo extends HTMLElement {
+class UserInfo extends HTMLElement {
     background?: string;
     userPic?: string;
     name?: string;
@@ -27,6 +27,7 @@ class userInfo extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        // console.log('User Info connected');
     }
 
     render() {
@@ -51,5 +52,5 @@ class userInfo extends HTMLElement {
     }
 }
 
-customElements.define('user-info', userInfo);
-export default userInfo;
+customElements.define('user-info', UserInfo);
+export default UserInfo;

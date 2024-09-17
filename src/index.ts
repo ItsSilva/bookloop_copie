@@ -1,6 +1,7 @@
 import * as components from './components/index';
 import './screens/clubsLanding/clubsLanding';
 
+
 class AppContainer extends HTMLElement {
     constructor() {
         super();

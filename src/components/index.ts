@@ -1,1 +1,2 @@
-export { default as clubsLanding } from '../screens/clubsLanding/clubsLanding';
+export { default as NavBar } from './navBar/navBar';
+export { default as UserInfo } from './userInfo/userInfo';

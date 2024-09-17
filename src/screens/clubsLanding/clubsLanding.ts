@@ -1,26 +1,29 @@
-import userInfo, {Attribute} from '../../components/userInfo/userInfo';
-import '../../components/navBar/navBar';
+// import '../../components/navBar/navBar';
+import * as components from '../../components/index';
+import UserInfo from '../../components/userInfo/userInfo';
 import {dataUsers } from '../../data/dataUsers';
 
 class ClubsLanding extends HTMLElement {
-    user: userInfo[] = [];
+    user: UserInfo[] = [];
 
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-    }
-
-    connectedCallback() {
-        this.render();
 
         dataUsers.forEach(dataUser => {
-            const userCard = this.ownerDocument.createElement('user-info') as userInfo;
+            // console.log(dataUser);
+            
+            const userCard = this.ownerDocument.createElement('user-info') as UserInfo;
             userCard.setAttribute('background', dataUser.background);
             userCard.setAttribute('userPic', dataUser.userPic);
             userCard.setAttribute('name', dataUser.name);
             userCard.setAttribute('at', dataUser.at);
-            this.shadowRoot?.appendChild(userCard);
+            this.user.push(userCard);
         });
+    }
+
+    connectedCallback() {
+        this.render();
     }
 
     render() {
@@ -32,9 +35,14 @@ class ClubsLanding extends HTMLElement {
                     input="Search"
                 ></nav-bar>
             `;
-            this.user.forEach((user) => {
-                this.shadowRoot?.appendChild(user);
+
+            this.user.forEach((e) => {
+                this.shadowRoot?.appendChild(e);
+            console.log('Clubs Landing connected');
             })
+
+            // console.log(this.user);
+            
         }
     }    
 }
